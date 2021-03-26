@@ -44,9 +44,9 @@ var buttonEl = document.getElementsByClassName("saveBtn")
 for (var i = 0; i < buttonEl.length; i++) {
     
   buttonEl[i].addEventListener("click", function(event) {
-    var saveText = event.target.Sibling;
-    console.log(SaveText)
-    localStorage.setItem("planner-text",saveText);
+    var saveText = event.target.parentElement.previousElementSibling.value;
+    console.log(saveText)
+    localStorage.setItem("planner-text "+ [9 + i],saveText);
     
  });
 
