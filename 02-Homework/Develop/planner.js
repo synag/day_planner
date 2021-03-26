@@ -8,26 +8,26 @@ var hourBlocks = document.querySelectorAll(".time");
 for (var i=0; i<hourBlocks.length; i++){
   var currentTime = moment().format("H");
   var currentBlockTime = hourBlocks[i].getAttribute("id");
-  console.log(currentBlockTime);
+   console.log(currentBlockTime);
+ 
 
-   if (currentTime > currentBlockTime){//Past
+   if (parseInt(currentTime) > parseInt(currentBlockTime)){//Past
 
-    //find value and set id to past  -NOT FINISHED
-    var textAreaColor = document.getElementById(currentBlockTime)
+    var textAreaColor = document.getElementById(currentBlockTime);
     var newID = document.createAttribute("id");
     newID.value = "past";                          
     textAreaColor.setAttributeNode(newID);                         
                             
     
-  } else if (currentTime < currentBlockTime){//Future
-    var textAreaColor = document.getElementById(currentBlockTime)
+  } else if (parseInt(currentTime) < parseInt(currentBlockTime)){//Future
+    var textAreaColor = document.getElementById(currentBlockTime);
     var newID = document.createAttribute("id");
     newID.value = "future";                          
     textAreaColor.setAttributeNode(newID);   
 
   } else { //Present
    
-    var textAreaColor = document.getElementById(currentBlockTime)
+    var textAreaColor = document.getElementById(currentBlockTime);
     var newID = document.createAttribute("id");
     newID.value = "present";                          
     textAreaColor.setAttributeNode(newID);    
@@ -39,14 +39,15 @@ for (var i=0; i<hourBlocks.length; i++){
 
 // save to local storage (NOT FINISHED)
 var buttonEl = document.getElementsByClassName("saveBtn")
-var textEl =document.querySelectorAll("textarea")
+// var textEl =document.querySelectorAll("textarea").value
 //Loops through all the button click
 for (var i = 0; i < buttonEl.length; i++) {
     
   buttonEl[i].addEventListener("click", function(event) {
-    var saveText = event.value.previousElementSibling.innerText;
+    var saveText = event.target.Sibling;
+    console.log(SaveText)
     localStorage.setItem("planner-text",saveText);
-    console.log(saveText)
+    
  });
 
 
