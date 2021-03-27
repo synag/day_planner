@@ -46,7 +46,13 @@ for (var i = 0; i < buttonEl.length; i++) {
   buttonEl[i].addEventListener("click", function(event) {
     var saveText = event.target.parentElement.previousElementSibling.value;
     console.log(saveText)
-    localStorage.setItem("planner-text "+ [9 + i],saveText);
+
+    var storageKey = event.target.parentElement.previousElementSibling
+      localStorage.setItem("planner-text "+ storageKey.classList[2] ,saveText);
+    
+
+     
+    // localStorage.setItem("planner-text "+ [i],saveText);
     
  });
 
