@@ -7,56 +7,56 @@ var hourBlocks = document.querySelectorAll(".time");
 //Make updates
 for (var i=0; i<hourBlocks.length; i++){
   var currentTime = moment().format("H");
-  var currentBlockTime = hourBlocks[i].getAttribute("id");
+  var currentBlockTime = hourBlocks[i].getAttribute("id").substr(1);
    console.log(currentBlockTime);
  
 
    if (parseInt(currentTime) > parseInt(currentBlockTime)){//Past
 
-    var textAreaColor = document.getElementById(currentBlockTime);
-    var newID = document.createAttribute("id");
-    newID.value = "past";                          
-    textAreaColor.setAttributeNode(newID);                         
-                            
-    
+    var textAreaColor = document.getElementById("h"+currentBlockTime);
+    textAreaColor.classList.add("past");
+                        
+                          
   } else if (parseInt(currentTime) < parseInt(currentBlockTime)){//Future
-    var textAreaColor = document.getElementById(currentBlockTime);
-    var newID = document.createAttribute("id");
-    newID.value = "future";                          
-    textAreaColor.setAttributeNode(newID);   
+    var textAreaColor = document.getElementById("h"+currentBlockTime);
+    textAreaColor.classList.add("future");
+
 
   } else { //Present
    
-    var textAreaColor = document.getElementById(currentBlockTime);
-    var newID = document.createAttribute("id");
-    newID.value = "present";                          
-    textAreaColor.setAttributeNode(newID);    
-     
+    var textAreaColor = document.getElementById("h"+currentBlockTime);
+    textAreaColor.classList.add("present"); 
     
   }
   
 }
 
-// save to local storage (NOT FINISHED)
+
 var buttonEl = document.getElementsByClassName("saveBtn")
-// var textEl =document.querySelectorAll("textarea").value
-//Loops through all the button click
+
+
 for (var i = 0; i < buttonEl.length; i++) {
     
   buttonEl[i].addEventListener("click", function(event) {
-    var saveText = event.target.parentElement.previousElementSibling.value;
-    console.log(saveText)
-
-    var storageKey = event.target.parentElement.previousElementSibling
-      localStorage.setItem("planner-text "+ storageKey.classList[2] ,saveText);
+    event.preventDefault();
     
+    
+     var saveText = event.target.parentElement.previousElementSibling.value;
+     var storageKey = event.target.parentElement.previousElementSibling
+   
+  
+     localStorage.setItem("planner-text-"+ storageKey.classList[2], saveText);
 
-     
-    // localStorage.setItem("planner-text "+ [i],saveText);
     
  });
 
+ };
 
+
+ for (var i=0; i<9; i++){
+  var text = localStorage.getItem("planner-text-"+(i+9));
+  $("#h"+(i+9)).val(text);
  }
-// //Display plans on html after refresh (Get Item)
-// //Color changes based on past, present, and future (Set Attribute)(Need to compate time )
+
+
+
