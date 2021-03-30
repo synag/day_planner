@@ -4,7 +4,7 @@ Create a simple calendar application that allows a user to save events for each 
 Installation
 There are no specific installation instructions. However, the coding_quiz Application is hosted on Github. Below is the URL to the webpage.
 
-URL:
+URL: https://github.com/synag/day_planner
 
 Github repository:
 
