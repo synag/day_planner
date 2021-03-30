@@ -1,32 +1,30 @@
-# password_generator
-## Description 
+# 05 Third-Party APIs: Work Day Scheduler
 
-The Password Generator project is an application that enables employees to generate random passwords based on the criteria that they’ve selected. The app runs in the browser with a feature that dynamically updates HTML and CSS. It has a clean and polished, responsive user interface that adapts to multiple screen sizes.
+## Your Task
 
-
+Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 ## Installation
 
-There are no specific installation instructions. However, the Password Generator Application is hosted on Github. Below is the URL to the webpage. 
+There are no specific installation instructions. However, the coding_quiz Application is hosted on Github. Below is the URL to the webpage. 
 
-URL: https://synag.github.io/password_generator/
+URL: 
 
-Github repository: https://github.com/synag/password_generator
+Github repository: 
 
 Folders and Files
-- ReadMe: Password Generator instruction
-- Index.html: Password Generator
-- Asset Folder (Image folder, CSS folder and js folder)
+- ReadMe: weekly planner Instructions
+- Index.html: wweb page
+- Asset Folder (CSS folder and js folder)
 
 
 ## Usage and Demo 
 
 Minimum usage requirements. 
 
-Below is the Password Generator screenshot, the image shows the web application's appearance and functionality:
+Below is the weekly planner screenshot, the image shows the web application's appearance and functionality:
 
-![Password Generator Page.](./Assets/images/Screenshot-Password-Generator.png)
-
+![weekly-planner](weekly-planner-screenshot.png)
 
 
 ## Credits
@@ -35,7 +33,7 @@ No additional developers worked on this project. However, I did use the followin
 
 Tools: HTML, CSS javaScript
 
-I also used the w3school (https://www.w3schools.com/)  and OWASP Foundation (https://www.owasp.org/index.php/Password_special_characters) as a resources.
+I also used the w3school (https://www.w3schools.com/)  as a resources.
 
 
 ## License
@@ -44,62 +42,75 @@ Exclusive rights to the source are granted to Carl Benbnow as the developer and 
 
 
 
-## User Story and DOD Compliance
 
+## User Story
 
+```md
+AS AN employee with a busy schedule
+I WANT to add important events to a daily planner
+SO THAT I can manage my time effectively
+```
+
+## Acceptance Criteria
+
+```md
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with timeblocks for standard business hours
+WHEN I view the timeblocks for that day
+THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+WHEN I click into a timeblock
+THEN I can enter an event
+WHEN I click the save button for that timeblock
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
 ```
 
 
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
 
+## Grading Requirements
 
-Acceptance Criteria (Done)
+This homework is graded based on the following criteria: 
 
+### Technical Acceptance Criteria: 40%
 
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+* Satisfies all of the above acceptance criteria plus the following:
 
+  * Uses a date utility library to work with date and time
 
+### Deployment: 32%
 
-Definition of Done:
+* Application deployed at live URL
 
+* Application loads with no errors
 
-Technical Acceptance Criteria (Done)
+* Application GitHub URL submitted
 
-* Satisfies all of the above acceptance criteria plus the following code improvements:
-  * Application's links all function correctly.
-  * Application's CSS selectors and properties are consolidated and organized to follow semantic structure.
-  * Application's CSS file is properly commented.
+* GitHub repo contains application code
 
-Deployment (Done)
-* Application deployed at live URL using GitHub Pages.
-* Application loads with no errors.
-* Application GitHub URL submitted.
-* GitHub repository that contains application code.
+### Application Quality: 15%
 
+* Application user experience is intuitive and easy to navigate
 
-Application Quality (Done)
-* Application resembles (at least 90%) screenshots provided in the homework instructions.
+* Application user interface style is clean and polished
 
-Repository Quality (Done)
+* Application resembles the mock-up functionality provided in the homework instructions
 
-* Repository has a unique name.
-* Repository follows best practices for file structure and naming conventions.
+### Repository Quality: 13%
+
+* Repository has a unique name
+
+* Repository follows best practices for file structure and naming conventions
+
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-* Repository contains multiple descriptive commit messages.
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+
+* Repository contains multiple descriptive commit messages
+
+* Repository contains quality README file with description, screenshot, and link to deployed application
+
+
+- - -
+
